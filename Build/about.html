@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel='stylesheet' href='style.css'>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src='js/jacksonthatsme.js'></script>
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Jackson Lynch</h1>
+    <nav>
+      <ul>
+        <li>Work</li>
+        <li class='current'><a class='current' href="about.html">About</a></li>
+        <li>Twitter</li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container"><!-- Container Start -->
+    <div class="about">
+      <section class="img">
+        <img src="images/bio-img.jpg" alt="" />
+        <p class="caption">Photo by Micah E. Wood</p>
+      </section>
+      <section class="bio">
+        <h2>Jackson Lynch is a graphic designer from Boston MA, born and raised. He is currently living in Baltimore MD, pursuing a BFA in Graphic Design at The Maryland Institute College of Art a.k.a. <a href="mica.edu">MICA</a>, and working at Friends of The Web. He likes bike rides, lumbar support, his mother, and of course; all things graphic design.</h2>
+        </section>
+        <section class="contact">
+          <h2>Contact</h2>
+          <p>I tweet and I dribbble and I listen to music on Rdio</p>
+          <p>I am currently available for design and illustration projects</p>
+          <p>Get in touch at jacksonthatsme@gmail.com</p>
+        </section>
+        <section class="friends">
+          <h2>Friends</h2>
+          <ul class="friends">
+            <li><a href="">Anne Lee</a></li>
+            <li>Micah E. Wood</li>
+            <li>Micah E. Wood</li>
+            <li>Micah E. Wood</li>
+            <li>Micah E. Wood</li>
+            <li>Micah E. Wood</li>
+          </ul>
+        </section>
+    </div>
+  </div><!-- Container End -->
+</main>
+<div class="clear"></div>
+<footer>
+  <div class="container">
+    Jackson Lynch 2014
+  </div>
+</footer>
+</body>
+</html>

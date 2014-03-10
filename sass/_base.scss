@@ -1,0 +1,37 @@
+/* MIXINS */
+/* VARIABLES */
+/* COLORS */
+$_blue: #0047CE;
+$_black: #04223D;
+$_pink: #ED1976;
+$_white: #ffffff;
+
+/* BREAKPOINTS */
+$x-large-bp: "min-width: 1300px";
+$large-bp: "max-width:1300px";
+$med-large-bp: "max-width:1000px";
+$med-bp: "max-width:800px";
+$med-small-bp: "max-width:600px";
+$small-bp: "max-width:400px";
+$x-small-bp: "max-width:320px";
+
+/* BASE */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &::selection {
+    background-color: $_pink;
+  }
+  &::-moz-selection {
+    background-color: $_pink;
+  }
+}
+body{
+  font-family: 'Droid Sans', verdana, arial, sans-serif;
+  font-size: 14px;
+  color: $_black;
+}
+.clear{
+  clear: both;
+}

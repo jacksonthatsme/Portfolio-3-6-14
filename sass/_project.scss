@@ -1,0 +1,41 @@
+main.project{
+  .information{
+    margin-bottom: 3em;
+    position: relative;
+    .overview, .description, .callout{
+      display: inline-block;
+      vertical-align: text-top;
+    }
+    .overview{
+      padding: 0 5em 0 0;
+      h4{
+        display: inline;
+        &:not(:last-of-type){
+          &:after{
+            content: " & ";
+          }
+        }
+      }
+    }
+    @media all and (#{$med-bp}){
+      .description{
+        display: block;
+        width: 100%;
+        margin: 2em 0 0;
+      }
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+.img-full{
+  position: relative;
+  p.caption{
+    position: absolute;
+    bottom: 0px;
+  }
+}
+.img-contained{
+  padding: 2em 0;
+}

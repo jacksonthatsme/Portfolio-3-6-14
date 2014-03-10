@@ -1,0 +1,54 @@
+h1{
+  font-family: georgia, serif;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 700;
+  color: $_blue;
+  & + p{
+    margin: 1em 0 0;
+  }
+}
+h2{
+  font-size: 1.5em;
+  line-height: 1.6em;
+  font-family: georgia;
+  color: $_blue;
+}
+h3{
+  font-size: 1.2em;
+  font-weight: 700;
+  color: $_blue;
+  & + p{
+    margin: 1em 0 0;
+  }
+}
+h4{
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+  & + p{
+    margin: .6em 0 0;
+  }
+}
+p{
+  line-height: 1.7em;
+}
+.caption{
+  padding: 1em 0 3em;
+  font-size: .9em;
+  &.white{
+    color: $_white;
+  }
+}
+h1,h2,h3,h4,p{
+  a{
+    border-bottom: 1px solid $_pink;
+    &:hover{
+      border-bottom: 3px solid $_pink;
+    }
+  }
+}
+strong{
+  font-weight: bolder;
+}

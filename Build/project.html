@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel='stylesheet' href='style.css'>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src='js/jacksonthatsme.js'></script>
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Jackson Lynch</h1>
+    <nav>
+      <ul>
+        <li>Work</li>
+        <li><a href="about.html">About</a></li>
+        <li>Twitter</li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="project">
+  <div class="container"><!--Container Start-->
+    <div class="information"><!--Information Start-->
+      <div class="overview">
+        <h2>Schoolmarm</h2>
+        <ul class="tags">
+          <h4>Lettering</h4>
+          <h4>Type</h4>
+        </ul>
+        <h4>2013</h4>
+      </div>
+      <div class="description line-width">
+      <p>
+        Schoolmarm is a very disapproving numeral set, designed with pencils, books and teachers dirty looks in mind. Inspired by the schoolhouse era, Schoolmarm features rounded terminals, and low contrast strokes.</p>
+    <p>- Free download available soon -</p>
+      </div>
+    </div><!--Information End-->
+  </div><!--Container End-->
+  <div class="img-full"><!--img-full Start-->
+    <img src="images/project.jpg" alt="" />
+    <div class="container"><!--Container Start-->
+      <p class="caption white">Caption Text Caption Text</p>
+    </div><!--Container End-->
+  </div><!--img-full End-->
+  <div class="img-contained" style="background-color: white;">
+    <div class="container"><!--Container Start-->
+      <img src="images/schoolmarm_numerals.png" alt="" />
+      <p class="caption">Caption Text Caption Text</p>
+    </div><!--Container End-->
+  </div>
+  <div class="img-w-browser" style="background-color: aqua">
+    <div class="container">
+      <div class="browser">
+        <div class="header">
+          <ul class="buttons">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="input">
+            http://www.timespent.biz
+            <a class ="link" href="">&rarr;</a>
+          </div>
+        </div>
+        <img src="images/project.jpg">
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    Jackson Lynch 2014
+  </div>
+</footer>
+</body>
+</html>

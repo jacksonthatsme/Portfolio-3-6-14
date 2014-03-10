@@ -1,0 +1,47 @@
+ul.thumbnails{
+  li{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 1em 1em 0;
+    position: relative;
+    @media all and (#{$x-large-bp}){
+      width: 22%;
+    }
+    @media all and (#{$large-bp}){
+      width: 22%;
+    }
+    @media all and (#{$med-large-bp}){
+      width:  30%;
+    }
+    @media all and (#{$med-bp}){
+      width:  48%;
+    }
+    @media all and (#{$small-bp}){
+      width:  100%;
+    }
+    img{
+      width: 100%;
+    }
+    &.new{
+      &:after{
+        width: 83px;
+        height: 80px;
+        content: "";
+        background-image: url(images/new.svg);
+        display: block;
+        position: absolute;
+        top: 0;
+        margin-top: -35px;
+        right: 0;
+      }
+    }
+    h4{
+      display: inline;
+      &:not(:last-child){
+        &:after{
+          content: " & ";
+        }
+      }
+    }
+  }
+}

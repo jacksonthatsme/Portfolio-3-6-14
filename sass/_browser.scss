@@ -1,0 +1,44 @@
+.img-w-browser{
+  padding: 2em 0;
+  .browser{
+    box-shadow: 0px 0px 18px rgba(0,0,0, .2);
+    border-radius: 7px 7px 5px 5px;
+    overflow: hidden;
+    color: #cfd0d1;
+    font-size: .9em;
+    ul.buttons{
+      margin: 0px 0px 10px;
+      padding: 0px;
+      li{
+        list-style-type: none;
+        width: 10px;
+        height: 10px;
+        background-color: #cfd0d1;
+        display: inline-block;
+        border-radius: 5px;
+        margin: 0px;
+      }
+    }  
+    .header{
+      background-color: #ecf0f1;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 7px 7px 0 0;
+    }
+    .input{
+      padding: 7px 12px;
+      background-color: #ffffff;
+      border-radius: 3px;
+    }
+    .foot{
+      height: 10px;
+      background-color: #ecf0f1;
+    }
+    .link{
+      float: right;
+    }
+    img{
+      margin: 0px;
+    }
+  }
+}

@@ -1,0 +1,295 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+/*RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.clear {
+  clear: both;
+  margin: 0px; }
+
+/* MIXINS */
+/* VARIABLES */
+/* COLORS */
+/* BREAKPOINTS */
+/* BASE */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  *::selection, *:before::selection, *:after::selection {
+    background-color: #ed1976; }
+  *::-moz-selection, *:before::-moz-selection, *:after::-moz-selection {
+    background-color: #ed1976; }
+
+body {
+  font-family: 'Droid Sans', verdana, arial, sans-serif;
+  font-size: 14px;
+  color: #04223d; }
+
+.clear {
+  clear: both; }
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 5%; }
+
+.line-width {
+  max-width: 500px; }
+
+footer {
+  padding: 8em 0 2em;
+  font-size: .8em;
+  text-transform: uppercase; }
+
+h1 {
+  font-family: georgia, serif;
+  font-size: 2em;
+  line-height: 1em;
+  font-weight: 700;
+  color: #0047ce; }
+  h1 + p {
+    margin: 1em 0 0; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.6em;
+  font-family: georgia;
+  color: #0047ce; }
+
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #0047ce; }
+  h3 + p {
+    margin: 1em 0 0; }
+
+h4 {
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6em; }
+  h4 + p {
+    margin: .6em 0 0; }
+
+p {
+  line-height: 1.7em; }
+
+.caption {
+  padding: 1em 0 3em;
+  font-size: .9em; }
+  .caption.white {
+    color: white; }
+
+h1 a, h2 a, h3 a, h4 a, p a {
+  border-bottom: 1px solid #ed1976; }
+  h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, p a:hover {
+    border-bottom: 3px solid #ed1976; }
+
+strong {
+  font-weight: bolder; }
+
+header {
+  margin: 5em 0 3em; }
+
+nav {
+  margin: .6em 0 0; }
+  nav ul li {
+    display: inline-block;
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 2em 4px 0; }
+    nav ul li a:hover {
+      border-bottom: 4px solid #ed1976; }
+
+ul.thumbnails li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 1em 1em 0;
+  position: relative; }
+  @media all and (min-width: 1300px) {
+    ul.thumbnails li {
+      width: 22%; } }
+  @media all and (max-width: 1300px) {
+    ul.thumbnails li {
+      width: 22%; } }
+  @media all and (max-width: 1000px) {
+    ul.thumbnails li {
+      width: 30%; } }
+  @media all and (max-width: 800px) {
+    ul.thumbnails li {
+      width: 48%; } }
+  @media all and (max-width: 400px) {
+    ul.thumbnails li {
+      width: 100%; } }
+  ul.thumbnails li img {
+    width: 100%; }
+  ul.thumbnails li.new:after {
+    width: 83px;
+    height: 80px;
+    content: "";
+    background-image: url(../images/new.svg);
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-top: -35px;
+    right: 0; }
+  ul.thumbnails li h4 {
+    display: inline; }
+    ul.thumbnails li h4:not(:last-child):after {
+      content: " & "; }
+
+main.project .information {
+  margin-bottom: 3em;
+  position: relative; }
+  main.project .information .overview, main.project .information .description, main.project .information .callout {
+    display: inline-block;
+    vertical-align: text-top; }
+  main.project .information .overview {
+    padding: 0 5em 0 0; }
+    main.project .information .overview h4 {
+      display: inline; }
+      main.project .information .overview h4:not(:last-of-type):after {
+        content: " & "; }
+  @media all and (max-width: 800px) {
+    main.project .information .description {
+      display: block;
+      width: 100%;
+      margin: 2em 0 0; } }
+main.project img {
+  width: 100%; }
+
+.img-full {
+  position: relative; }
+  .img-full p.caption {
+    position: absolute;
+    bottom: 0px; }
+
+.img-contained {
+  padding: 2em 0; }
+
+.img-w-browser {
+  padding: 2em 0; }
+  .img-w-browser .browser {
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 7px 7px 5px 5px;
+    overflow: hidden;
+    color: #cfd0d1;
+    font-size: .9em; }
+    .img-w-browser .browser ul.buttons {
+      margin: 0px 0px 10px;
+      padding: 0px; }
+      .img-w-browser .browser ul.buttons li {
+        list-style-type: none;
+        width: 10px;
+        height: 10px;
+        background-color: #cfd0d1;
+        display: inline-block;
+        border-radius: 5px;
+        margin: 0px; }
+    .img-w-browser .browser .header {
+      background-color: #ecf0f1;
+      box-sizing: border-box;
+      padding: 10px;
+      border-radius: 7px 7px 0 0; }
+    .img-w-browser .browser .input {
+      padding: 7px 12px;
+      background-color: #ffffff;
+      border-radius: 3px; }
+    .img-w-browser .browser .foot {
+      height: 10px;
+      background-color: #ecf0f1; }
+    .img-w-browser .browser .link {
+      float: right; }
+    .img-w-browser .browser img {
+      margin: 0px; }
+
+div.about {
+  max-width: 900px; }
+  div.about section {
+    width: 50%;
+    float: left; }
+    div.about section:nth-child(odd) {
+      padding-right: 2em; }
+    div.about section:nth-child(even) {
+      padding-left: 2em; }
+    div.about section.img .caption {
+      padding: 1em 0 0; }
+    div.about section.img img {
+      width: 100%; }
+    div.about section.bio {
+      min-height: 400px; }
+    div.about section.friends ul {
+      column-count: 2;
+      -moz-column-count: 2;
+      -webkit-column-count: 2; }
+      div.about section.friends ul li {
+        padding: .3em 0 0; }
+        div.about section.friends ul li a {
+          border-bottom: 1px solid #ed1976; }
+          div.about section.friends ul li a:hover {
+            border-bottom: 4px solid #ed1976; }
+    div.about section.contact h2, div.about section.friends h2, div.about section.tweet h2, div.about section.colophon h2 {
+      margin: 2em 0 .5em; }
+    @media all and (max-width: 800px) {
+      div.about section.img, div.about section.bio {
+        float: none;
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        min-height: 0px; }
+      div.about section.bio {
+        padding: 2em 0 0; }
+      div.about section.friends ul {
+        column-count: 1;
+        -moz-column-count: 1;
+        -webkit-column-count: 1; } }
+    @media all and (max-width: 600px) {
+      div.about section {
+        float: none;
+        width: 100%;
+        padding-left: 0px !important;
+        padding-right: 0px !important; }
+        div.about section.friends ul {
+          column-count: 2;
+          -moz-column-count: 2;
+          -webkit-column-count: 2; } }
+
+.resume {
+  max-width: 900px; }
+  .resume .column {
+    width: 50%;
+    float: left; }
+    .resume .column ul {
+      margin: 2.3em 0 0; }
+    .resume .column.left {
+      padding-right: 3em; }
+  @media all and (max-width: 600px) {
+    .resume .column {
+      width: 100%;
+      float: none; }
+      .resume .column.right {
+        margin: 2em 0 0; } }
